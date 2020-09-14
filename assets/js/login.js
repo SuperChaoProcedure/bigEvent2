@@ -45,7 +45,7 @@ $(function() {
         let data = $(this).serialize();
         $.ajax({
             type: 'POST',
-            url: 'http://ajax.frontend.itheima.net/api/login',
+            url: '/api/login',
             data,
             success(response) {
                 console.log(response);
