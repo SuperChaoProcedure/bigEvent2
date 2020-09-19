@@ -28,7 +28,7 @@ $(function() {
         e.preventDefault();
         $.ajax({
             type: 'POST',
-            url: 'http://ajax.frontend.itheima.net/api/reguser',
+            url: '/api/reguser',
             data: { username: $('.regBox [name=username]').val(), password: $('.regBox [name=password]').val() },
             success(response) {
                 console.log(response);
