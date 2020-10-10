@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>后台大布局</title>
+    <title>后台大事件</title>
+    <link type="image/x-icon" rel="shortcut icon" href="./bitbug_favicon.ico">
     <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
     <link rel="stylesheet" href="/assets/css/index.css">
 </head>
@@ -16,7 +17,7 @@
                 <!-- 左侧侧边栏上面头像 -->
                 <div class="userinfo">
                     <img src="http://t.cn/RCzsdCq" class="layui-nav-img" style="display: none;" />
-                    <span class="text-avatar">A</span>
+                    <span class="text-avatar"></span>
                     <span id="welcome">欢迎 ***</span>
                 </div>
             </div>
@@ -27,13 +28,13 @@
                         <!-- 右侧导航栏上面头像 -->
                         <a href="javascript:;" class="userinfo">
                             <img src="http://t.cn/RCzsdCq" class="layui-nav-img" style="display: none;" />
-                            <span class="text-avatar">A</span> 个人中心
+                            <span class="text-avatar"></span> 个人中心
                         </a>
                     </a>
                     <dl class="layui-nav-child">
-                        <dd><a href="">基本资料</a></dd>
-                        <dd><a href="">更换头像</a></dd>
-                        <dd><a href="">重置密码</a></dd>
+                        <dd><a href="/user/user_info.html" target="fm">基本资料</a></dd>
+                        <dd><a href="/user/user_avatar.html" target="fm">更换头像</a></dd>
+                        <dd><a href="/user/user_resetpwd.html" target="fm">重置密码</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item" id="out"><a href="javascript:;">退出</a></li>
@@ -49,7 +50,7 @@
                         <a class="" href="javascript:;">文章管理</a>
                         <dl class="layui-nav-child">
                             <dd><a href="/article/article_cate.html" target="fm">文章类别</a></dd>
-                            <dd><a href="javascript:;" target="fm">文章列表</a></dd>
+                            <dd><a href="/article/article_list.html" target="fm">文章列表</a></dd>
                             <dd><a href="javascript:;" target="fm">发表文章</a></dd>
                         </dl>
                     </li>
@@ -67,7 +68,7 @@
         </div>
 
         <div class="layui-body">
-            <iframe src="/article/article_cate.html" frameborder="0" name="fm"></iframe>
+            <iframe src="/article/article_list.html" frameborder="0" name="fm"></iframe>
         </div>
         <div class="layui-footer">
             <!-- 底部固定区域 -->

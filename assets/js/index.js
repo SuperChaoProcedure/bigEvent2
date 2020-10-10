@@ -1,6 +1,6 @@
 $(function() {
     $('#out').on('click', function() {
-        layer.confirm('确定退出吗?', function() {
+        layer.confirm('确定退出吗?', function(index) {
             // 删除凭证
             localStorage.removeItem('token');
             //跳转到登录页面

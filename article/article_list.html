@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+</head>
+<style>
+    body {
+        padding: 20px;
+        background-color: #f1f3f4;
+    }
+</style>
+
+<body>
+    <div class="layui-card ">
+        <div class="layui-card-header">文章列表</div>
+        <div class="layui-card-body">
+            <!-- 筛选模块 -->
+            <form class="layui-form" action="">
+                <!-- 所有分类 -->
+                <div class="layui-form-item layui-inline">
+                    <select name="cate_gory" lay-verify="required" type="select">
+
+                    </select>
+                </div>
+                <!-- 所有状态 -->
+                <div class="layui-form-item layui-inline">
+                    <select name="city" lay-verify="required">
+                    <option value="">所有状态</option>
+                    <option value="已发布">已发布</option>
+                    <option value="草稿">草稿</option>
+                    </select>
+                </div>
+                <div class="layui-form-item layui-inline">
+                    <button class="layui-btn" lay-submit lay-filter="formDemo">筛选</button>
+                </div>
+            </form>
+            <!-- 表格模块 -->
+            <table class="layui-table">
+                <colgroup>
+                    <col>
+                    <col width="200">
+                    <col width="200">
+                    <col width="200">
+                    <col width="150">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>昵称</th>
+                        <th>加入时间</th>
+                        <th>签名</th>
+                        <th>签名</th>
+                        <th>签名</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>文章标题</td>
+                        <td>分类</td>
+                        <td>发表时间</td>
+                        <td>状态</td>
+                        <td>
+                            <button type="button" class="layui-btn layui-btn-xs" id="edit">编辑</button>
+                            <button type="button" class="layui-btn layui-btn-xs layui-btn-danger " id="delete">删除</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <!-- 分页模块  -->
+            <div id="test1"></div>
+        </div>
+</body>
+<script src="/assets/lib/jquery.js "></script>
+<script src="/assets/lib/template-web.js"></script>
+<script src="/assets/lib//layui/layui.all.js "></script>
+<script src="/assets/js/webAPl.js"></script>
+<script src="/article/js/article_list.js"></script>
+<script type="text/html" id="category">
+    <option value="">所有分类</option>
+    {{each}}
+    <option value="{{$value.name}}">{{$value.name}}</option>
+    {{/each}}
+
+</script>
+
+</html>
